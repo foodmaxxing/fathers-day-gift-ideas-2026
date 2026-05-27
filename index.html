@@ -3,183 +3,649 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>10 Best Father’s Day Gift Ideas (2026) – Gifts Dad Will Actually Use</title>
-
-<meta name="description" content="Discover 10 highly-rated Father’s Day gift ideas Dad will actually love. Perfect for grilling, tech, tools, and everyday use.">
-
+<title>10 Best Father's Day Gift Ideas (2026) – Gifts Dad Will Actually Use</title>
+<meta name="description" content="Discover 10 highly-rated Father's Day gift ideas Dad will actually love. Perfect for grilling, tech, tools, and everyday use.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-body {
-    font-family: Arial, sans-serif !important;
-    margin: 0;
-    padding: 0;
-    background: #f7f7f7 !important;
-    color: #222 !important;
-}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-header {
-    background: #111 !important;
-    color: #fff !important;
-    padding: 40px 20px !important;
-    text-align: center !important;
-}
+  :root {
+    --cream: #F5F0E8;
+    --dark: #1A1612;
+    --mid: #3D3530;
+    --accent: #C4782A;
+    --accent-light: #E8965A;
+    --muted: #7A6F66;
+    --card-bg: #FFFFFF;
+    --border: #E0D8CE;
+    --tag-bg: #F0EBE2;
+  }
 
-h1 {
-    font-size: 32px !important;
-    margin-bottom: 10px !important;
-}
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    min-height: 100vh;
+  }
 
-.container {
-    width: 95% !important;
-    max-width: 1000px !important;
-    margin: auto !important;
-}
+  /* HERO */
+  .hero {
+    background: var(--dark);
+    color: var(--cream);
+    padding: 80px 24px 70px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
 
-.product {
-    background: #fff !important;
-    margin: 20px 0 !important;
-    padding: 20px !important;
-    border-radius: 12px !important;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
-}
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(196,120,42,0.25) 0%, transparent 65%);
+    pointer-events: none;
+  }
 
-.product img {
-    width: 100% !important;
-    border-radius: 10px !important;
-}
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 20px;
+  }
 
-.price {
-    font-size: 18px !important;
-    font-weight: bold !important;
-    color: #1a8917 !important;
-    margin: 10px 0 !important;
-}
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 6vw, 64px);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--cream);
+  }
 
-.btn {
-    display: inline-block !important;
-    background: #ff9900 !important;
-    color: #000 !important;
-    padding: 12px 18px !important;
-    text-decoration: none !important;
-    font-weight: bold !important;
-    border-radius: 8px !important;
-    margin-top: 10px !important;
-}
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent-light);
+  }
 
-.note {
-    font-size: 12px !important;
-    color: #666 !important;
-}
+  .hero-sub {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(245,240,232,0.7);
+    max-width: 480px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+  }
+
+  .hero-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 12px;
+    color: rgba(245,240,232,0.45);
+    letter-spacing: 0.05em;
+  }
+
+  .hero-meta span::before {
+    content: '—';
+    margin-right: 8px;
+    color: var(--accent);
+  }
+
+  /* FILTER BAR */
+  .filter-bar {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .filter-bar::-webkit-scrollbar { display: none; }
+
+  .filter-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+    padding: 16px 0;
+    margin-right: 4px;
+  }
+
+  .filter-btn {
+    padding: 6px 14px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--mid);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+    flex-shrink: 0;
+  }
+
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--dark);
+    border-color: var(--dark);
+    color: var(--cream);
+  }
+
+  /* MAIN LAYOUT */
+  .main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dark);
+  }
+
+  .section-count {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* PRODUCT GRID */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  /* PRODUCT CARD */
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(26,22,18,0.12);
+  }
+
+  .card-image {
+    aspect-ratio: 4/3;
+    background: var(--tag-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .rank-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--dark);
+    color: var(--cream);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+
+  .tag-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+
+  .card-body {
+    padding: 20px 22px 22px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-category {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--dark);
+  }
+
+  .card-desc {
+    font-size: 13.5px;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    margin-top: 4px;
+  }
+
+  .card-price {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--dark);
+  }
+
+  .card-price small {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-left: 2px;
+  }
+
+  .card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 100px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.15s, transform 0.1s;
+    white-space: nowrap;
+  }
+
+  .card-btn:hover {
+    background: var(--accent-light);
+    transform: scale(1.03);
+  }
+
+  .card-btn svg {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+  }
+
+  /* FEATURED CARD (first item) */
+  .card.featured {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: stretch;
+    max-height: 340px;
+  }
+
+  .card.featured .card-image {
+    width: 340px;
+    min-width: 340px;
+    aspect-ratio: unset;
+    border-radius: 0;
+    font-size: 80px;
+  }
+
+  .card.featured .card-body {
+    padding: 28px 32px;
+    justify-content: center;
+  }
+
+  .card.featured .card-title {
+    font-size: 26px;
+  }
+
+  /* FOOTER */
+  .site-footer {
+    background: var(--dark);
+    color: rgba(245,240,232,0.45);
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .site-footer a { color: rgba(245,240,232,0.6); text-decoration: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 680px) {
+    .card.featured {
+      flex-direction: column;
+      max-height: none;
+      grid-column: auto;
+    }
+    .card.featured .card-image {
+      width: 100%;
+      min-width: unset;
+      aspect-ratio: 4/3;
+    }
+    .filter-bar { gap: 6px; }
+  }
 </style>
 </head>
-
 <body>
 
-<header>
-    <h1>🎁 10 Best Father’s Day Gift Ideas (2026)</h1>
-    <p>Hand-picked gifts Dad will actually use — tools, tech, grilling, and more.</p>
+<!-- HERO -->
+<header class="hero">
+  <p class="hero-eyebrow">Father's Day 2026 Gift Guide</p>
+  <h1>Gifts Dad Will <em>Actually</em> Use</h1>
+  <p class="hero-sub">10 hand-picked picks across tools, tech, grilling, and everyday carry — all highly rated, all available on Amazon.</p>
+  <div class="hero-meta">
+    <span>Updated June 2026</span>
+    <span>10 Products</span>
+    <span>Affiliate links used</span>
+  </div>
 </header>
 
-<div class="container">
+<!-- FILTER BAR -->
+<nav class="filter-bar" aria-label="Filter by category">
+  <span class="filter-label">Filter:</span>
+  <button class="filter-btn active" onclick="filterCards('all', this)">All</button>
+  <button class="filter-btn" onclick="filterCards('tech', this)">Tech</button>
+  <button class="filter-btn" onclick="filterCards('tools', this)">Tools</button>
+  <button class="filter-btn" onclick="filterCards('grilling', this)">Grilling</button>
+  <button class="filter-btn" onclick="filterCards('wellness', this)">Wellness</button>
+  <button class="filter-btn" onclick="filterCards('everyday', this)">Everyday</button>
+</nav>
 
-<!-- PRODUCT 1 -->
-<div class="product">
-    <img src="image1.jpg" alt="DEWALT Drill Kit">
-    <h2>DEWALT 20V MAX Cordless Drill Kit</h2>
-    <div class="price">Price: $89.10 </div>
+<!-- MAIN -->
+<main class="main">
+  <div class="section-header">
+    <h2 class="section-title">Top Picks</h2>
+    <span class="section-count" id="count-label">Showing 10 gifts</span>
+  </div>
 
-    <!-- PASTE AFFILIATE LINK HERE -->
-    <a class="btn" href="https://amzn.to/3PveI54" target="_blank">
-        View on Amazon
-    </a>
-</div>
+  <div class="grid" id="product-grid">
 
-<!-- PRODUCT 2 -->
-<div class="product">
-    <img src="image2.jpg" alt="JBL Speaker">
-    <h2>JBL Charge 5 Bluetooth Speaker</h2>
-    <div class="price">Price: $139.95 </div>
+    <!-- 1. DEWALT DRILL — FEATURED -->
+    <div class="card featured" data-category="tools">
+      <div class="card-image">
+        🔧
+        <span class="rank-badge">#1 Pick</span>
+        <span class="tag-badge">Best Value</span>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Tools</span>
+        <h3 class="card-title">DEWALT 20V MAX Cordless Drill Kit</h3>
+        <p class="card-desc">A powerhouse starter kit that covers 90% of home projects. Includes two batteries, a charger, and a storage bag — everything he needs right out of the box. DEWALT's reliability is legendary, and at this price it's a no-brainer.</p>
+        <div class="card-footer">
+          <div class="card-price">$89.10 <small>on Amazon</small></div>
+          <a class="card-btn" href="https://amzn.to/3PveI54" target="_blank" rel="noopener">
+            View on Amazon
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
 
-    <a class="btn" href="https://amzn.to/4uavKUo" target="_blank">View on Amazon</a>
-</div>
+    <!-- 2. JBL SPEAKER -->
+    <div class="card" data-category="tech">
+      <div class="card-image">
+        🔊
+        <span class="rank-badge">#2</span>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Tech</span>
+        <h3 class="card-title">JBL Charge 5 Bluetooth Speaker</h3>
+        <p class="card-desc">Loud, clear, and built to survive poolside spills and camping trips. IP67 waterproof with 20 hours of battery life — it even charges his phone via USB.</p>
+        <div class="card-footer">
+          <div class="card-price">$139.95</div>
+          <a class="card-btn" href="https://amzn.to/4uavKUo" target="_blank" rel="noopener">
+            View on Amazon
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
 
-<!-- PRODUCT 3 -->
-<div class="product">
-    <img src="image3.jpg" alt="Meat Thermometer">
-    <h2>ThermoPro TP20 Wireless Meat Thermometer</h2>
-    <div class="price">Price: $33.99 </div>
+    <!-- 3. THERMOPRO -->
+    <div class="card" data-category="grilling">
+      <div class="card-image">
+        🌡️
+        <span class="rank-badge">#3</span>
+        <span class="tag-badge">Grill Dad</span>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Grilling</span>
+        <h3 class="card-title">ThermoPro TP20 Wireless Meat Thermometer</h3>
+        <p class="card-desc">Monitor two cuts of meat from up to 300ft away. No more hovering over a hot grill — the wireless receiver alerts him the moment the perfect temp is hit.</p>
+        <div class="card-footer">
+          <div class="card-price">$33.99</div>
+          <a class="card-btn" href="https://amzn.to/3Pp8Ha4" target="_blank" rel="noopener">
+            View on Amazon
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
 
-    <a class="btn" href="https://amzn.to/3Pp8Ha4" target="_blank">View on Amazon</a>
-</div>
+    <!-- 4. YETI -->
+    <div class="card" data-category="everyday">
+      <div class="card-image">
+        🥤
+        <span class="rank-badge">#4</span>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Everyday Carry</span>
+        <h3 class="card-title">YETI Rambler Tumbler</h3>
+        <p class="card-desc">The gold standard of insulated tumblers. Keeps coffee hot for hours and drinks cold all day. Built like a tank, looks great on a desk or in a truck cupholder.</p>
+        <div class="card-footer">
+          <div class="card-price">$35.00</div>
+          <a class="card-btn" href="https://amzn.to/43wGkd9" target="_blank" rel="noopener">
+            View on Amazon
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
 
-<!-- PRODUCT 4 -->
-<div class="product">
-    <img src="image4.jpg" alt="YETI Tumbler">
-    <h2>YETI Rambler Tumbler</h2>
-    <div class="price">Price: $35.00 </div>
+    <!-- 5. SONY HEADPHONES -->
+    <div class="card" data-category="tech">
+      <div class="card-image">
+        🎧
+        <span class="rank-badge">#5</span>
+        <span class="tag-badge">Premium</span>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Tech</span>
+        <h3 class="card-title">Sony WH-1000XM5 Noise-Cancelling Headphones</h3>
+        <p class="card-desc">Industry-leading noise cancellation and 30 hours of battery. Perfect for travel, the home office, or tuning out background chaos. A genuinely premium experience.</p>
+        <div class="card-footer">
+          <div class="card-price">$248.00</div>
+          <a class="card-btn" href="https://amzn.to/49rNwea" target="_blank" rel="noopener">
+            View on Amazon
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
 
-    <a class="btn" href="https://amzn.to/43wGkd9" target="_blank">View on Amazon</a>
-</div>
+    <!-- 6. GARMIN -->
+    <div class="card" data-category="wellness">
+      <div class="card-image">
+        ⌚
+        <span class="rank-badge">#6</span>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Wellness</span>
+        <h3 class="card-title">Garmin Vivoactive 5 Smartwatch</h3>
+        <p class="card-desc">A fitness-forward smartwatch that tracks sleep, workouts, stress, and heart health — without looking like a fitness device. 11-day battery life is a game-changer.</p>
+        <div class="card-footer">
+          <div class="card-price">$189.99</div>
+          <a class="card-btn" href="https://amzn.to/3RxAmWU" target="_blank" rel="noopener">
+            View on Amazon
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
 
-<!-- PRODUCT 5 -->
-<div class="product">
-    <img src="image5.jpg" alt="Sony Headphones">
-    <h2>Sony WH-1000XM5 Noise Cancelling Headphones</h2>
-    <div class="price">Price: $248.00 </div>
+    <!-- 7. OONI -->
+    <div class="card" data-category="grilling">
+      <div class="card-image">
+        🍕
+        <span class="rank-badge">#7</span>
+        <span class="tag-badge">Splurge Pick</span>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Grilling</span>
+        <h3 class="card-title">Ooni Koda Outdoor Pizza Oven</h3>
+        <p class="card-desc">Reaches 950°F in 15 minutes and cooks a Neapolitan pizza in 60 seconds. The gift that turns any backyard into an Italian pizzeria. He'll use it every weekend.</p>
+        <div class="card-footer">
+          <div class="card-price">$298.95</div>
+          <a class="card-btn" href="https://amzn.to/4dzkJa3" target="_blank" rel="noopener">
+            View on Amazon
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
 
-    <a class="btn" href="https://amzn.to/49rNwea" target="_blank">View on Amazon</a>
-</div>
+    <!-- 8. ECHO SHOW -->
+    <div class="card" data-category="tech">
+      <div class="card-image">
+        📺
+        <span class="rank-badge">#8</span>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Tech</span>
+        <h3 class="card-title">Echo Show 8 Smart Display</h3>
+        <p class="card-desc">A hub for the kitchen or home office. Video calls, music, smart home controls, and a rotating photo frame built in. Simple enough that he'll actually use it.</p>
+        <div class="card-footer">
+          <div class="card-price">$179.99</div>
+          <a class="card-btn" href="https://amzn.to/4tW4Ten" target="_blank" rel="noopener">
+            View on Amazon
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
 
-<!-- PRODUCT 6 -->
-<div class="product">
-    <img src="image6.jpg" alt="Garmin Watch">
-    <h2>Garmin Vivoactive 5 Smartwatch</h2>
-    <div class="price">Price: $189.99 </div>
+    <!-- 9. WALLET -->
+    <div class="card" data-category="everyday">
+      <div class="card-image">
+        👜
+        <span class="rank-badge">#9</span>
+        <span class="tag-badge">Under $35</span>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Everyday Carry</span>
+        <h3 class="card-title">Minimalist Leather Wallet</h3>
+        <p class="card-desc">Slim, RFID-blocking, and built from full-grain leather that ages beautifully. Holds up to 12 cards. A thoughtful everyday gift he'll carry for years.</p>
+        <div class="card-footer">
+          <div class="card-price">$29.99</div>
+          <a class="card-btn" href="https://amzn.to/4uzx83A" target="_blank" rel="noopener">
+            View on Amazon
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
 
-    <a class="btn" href="https://amzn.to/3RxAmWU" target="_blank">View on Amazon</a>
-</div>
+    <!-- 10. THERAGUN -->
+    <div class="card" data-category="wellness">
+      <div class="card-image">
+        💪
+        <span class="rank-badge">#10</span>
+      </div>
+      <div class="card-body">
+        <span class="card-category">Wellness</span>
+        <h3 class="card-title">Theragun Mini Massage Gun</h3>
+        <p class="card-desc">Pocket-sized but powerful — three speed settings and a 150-minute battery. Great for post-workout recovery or loosening up after a long day at a desk or on a job site.</p>
+        <div class="card-footer">
+          <div class="card-price">$219.99</div>
+          <a class="card-btn" href="https://amzn.to/4dINFfX" target="_blank" rel="noopener">
+            View on Amazon
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
 
-<!-- PRODUCT 7 -->
-<div class="product">
-    <img src="image7.jpg" alt="Ooni Pizza Oven">
-    <h2>Ooni Koda Outdoor Pizza Oven</h2>
-    <div class="price">Price: $298.95 </div>
+  </div><!-- /grid -->
+</main>
 
-    <a class="btn" href="https://amzn.to/4dzkJa3" target="_blank">View on Amazon</a>
-</div>
-
-<!-- PRODUCT 8 -->
-<div class="product">
-    <img src="image8.jpg" alt="Echo Show">
-    <h2>Echo Show 8 Smart Display</h2>
-    <div class="price">Price: $179.99 </div>
-
-    <a class="btn" href="https://amzn.to/4tW4Ten" target="_blank">View on Amazon</a>
-</div>
-
-<!-- PRODUCT 9 -->
-<div class="product">
-    <img src="image9.jpg" alt="Leather Wallet">
-    <h2>Minimalist Leather Wallet</h2>
-    <div class="price">Price: $29.99 </div>
-
-    <a class="btn" href="https://amzn.to/4uzx83A" target="_blank">View on Amazon</a>
-</div>
-
-<!-- PRODUCT 10 -->
-<div class="product">
-    <img src="image10.jpg" alt="Massage Gun">
-    <h2>Theragun Mini Massage Gun</h2>
-    <div class="price">Price: $219.99 </div>
-
-    <a class="btn" href="https://amzn.to/4dINFfX" target="_blank">View on Amazon</a>
-</div>
-
-</div>
-
-<footer style="text-align:center; padding:20px; font-size:12px; color:#777;">
-    © 2026 Father’s Day Gift Guide | Affiliate links may be used.
+<footer class="site-footer">
+  <p>© 2026 Father's Day Gift Guide &nbsp;·&nbsp; <a href="#">Privacy</a> &nbsp;·&nbsp; Affiliate links may earn a commission at no extra cost to you.</p>
 </footer>
+
+<script>
+  function filterCards(category, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const cards = document.querySelectorAll('#product-grid .card');
+    let visible = 0;
+
+    cards.forEach(card => {
+      const match = category === 'all' || card.dataset.category === category;
+      card.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+
+    // Featured card layout: only show as featured when "All" is selected
+    const featured = document.querySelector('.card.featured');
+    if (featured) {
+      if (category !== 'all') {
+        featured.classList.remove('featured');
+        featured.dataset.wasFeatured = 'true';
+      } else if (featured.dataset.wasFeatured) {
+        featured.classList.add('featured');
+      }
+    }
+
+    document.getElementById('count-label').textContent =
+      'Showing ' + visible + ' gift' + (visible !== 1 ? 's' : '');
+  }
+</script>
 
 </body>
 </html>
